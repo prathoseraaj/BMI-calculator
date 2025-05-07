@@ -27,20 +27,20 @@ const page = () => {
         </div>
         <div className="flex flex-row justify-center gap-30 mt-5">
           <div>
-            <h1 className="font-bold text-[17px]  ">Height(Cm)</h1>
+            <h1 className="font-bold text-[17px] ">Height(Cm)</h1>
             <input
-              type="number"
+              type="text"
               name="height"
-              className="w-[50px] border rounded mt-2"
+              className="w-[50px] border rounded mt-2 ml-3 px-2"
               onChange={(e)=>setHeight(Number(e.target.value))}
             />
           </div>
           <div>
             <h1 className="font-bold text-[17px] ">Weight(Kg)</h1>
             <input
-              type="number"
+              type="text"
               name="weight"
-              className="w-[50px] border rounded mt-2"
+              className="w-[50px] border rounded mt-2 px-2 ml-3"
               onChange={(e)=>setWeight(Number(e.target.value))}
             />
           </div>
