@@ -2,12 +2,18 @@
 import React, { useState } from "react";
 
 const page = () => {
-  const [height, setHeight] = useState<string>("");
-  const [weight, setWeight] = useState<string>("");
+  const [height, setHeight] = useState<number>(0);
+  const [weight, setWeight] = useState<number>(0);
+  const [result, setResult] = useState<number>(0);
 
   const handleBMI = () => {
     console.log("Height:",height)
     console.log("Weight:",weight)
+
+    const bmiresult: number = weight*10000/(height*height)
+    console.log(bmiresult)
+    setResult(bmiresult)
+
   }
 
   return (
@@ -21,21 +27,21 @@ const page = () => {
         </div>
         <div className="flex flex-row justify-center gap-30 mt-5">
           <div>
-            <h1 className="font-bold text-[17px]  ">Height</h1>
+            <h1 className="font-bold text-[17px]  ">Height(Cm)</h1>
             <input
               type="number"
               name="height"
               className="w-[50px] border rounded mt-2"
-              onChange={(e)=>setHeight(e.target.value)}
+              onChange={(e)=>setHeight(Number(e.target.value))}
             />
           </div>
           <div>
-            <h1 className="font-bold text-[17px] ">Weight</h1>
+            <h1 className="font-bold text-[17px] ">Weight(Kg)</h1>
             <input
               type="number"
               name="weight"
               className="w-[50px] border rounded mt-2"
-              onChange={(e)=>setWeight(e.target.value)}
+              onChange={(e)=>setWeight(Number(e.target.value))}
             />
           </div>
         </div>
@@ -47,7 +53,7 @@ const page = () => {
           >
             wasup!?
           </button>
-          <h1>Result: {48}</h1>
+          <h1>Result: {result}</h1>
           <h1>Insights: {"Under-Weight"}</h1>
         </div>
       </div>
