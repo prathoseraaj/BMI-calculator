@@ -1,11 +1,15 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 const page = () => {
+  const [height, setHeight] = useState<string>("");
+  const [weight, seteight] = useState<string>("");
+
   return (
     <div className="flex justify-center items-center h-[100vh]">
-      <div className="flex flex-col h-[40vh] w-[600px] bg-white rounded-[10px] p-[10px]">
+      <div className="flex flex-col h-[50vh] w-[600px] bg-white rounded-[10px] p-[10px]">
         <div className="flex flex-col items-center w-full">
-          <h1 className="font-bold text-[25px]  ">BMI Calculator</h1>
+          <h1 className="font-bold text-[25px] mt-5  ">BMI Calculator</h1>
           <p className="text-gray-400 text-[20px]">
             Check your Body mass Index
           </p>
@@ -29,6 +33,12 @@ const page = () => {
           </div>
         </div>
         <div className="flex flex-col items-center mt-10 ">
+          <button
+            type="button"
+            className="bg-black text-white w-[75px] mb-10 rounded-[5px] p-1 shadow-2xl"
+          >
+            wasup!?
+          </button>
           <h1>Result: {12}</h1>
           <h1>Insights: {"Under-Weight"}</h1>
         </div>
