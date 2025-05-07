@@ -7,7 +7,7 @@ const page = () => {
 
   return (
     <div className="flex justify-center items-center h-[100vh]">
-      <div className="flex flex-col h-[50vh] w-[600px] bg-white rounded-[10px] p-[10px]">
+      <div className="flex flex-col h-[50vh] w-[600px] bg-white rounded-[10px] p-[10px] shadow-lg">
         <div className="flex flex-col items-center w-full">
           <h1 className="font-bold text-[25px] mt-5  ">BMI Calculator</h1>
           <p className="text-gray-400 text-[20px]">
@@ -35,7 +35,7 @@ const page = () => {
         <div className="flex flex-col items-center mt-10 ">
           <button
             type="button"
-            className="bg-black text-white w-[75px] mb-10 rounded-[5px] p-1 shadow-2xl"
+            className="bg-black text-white w-[75px] mb-10 rounded-[5px] p-1 "
           >
             wasup!?
           </button>
