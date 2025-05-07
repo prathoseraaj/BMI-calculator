@@ -3,7 +3,12 @@ import React, { useState } from "react";
 
 const page = () => {
   const [height, setHeight] = useState<string>("");
-  const [weight, seteight] = useState<string>("");
+  const [weight, setWeight] = useState<string>("");
+
+  const handleBMI = () => {
+    console.log("Height:",height)
+    console.log("Weight:",weight)
+  }
 
   return (
     <div className="flex justify-center items-center h-[100vh]">
@@ -21,6 +26,7 @@ const page = () => {
               type="number"
               name="height"
               className="w-[50px] border rounded mt-2"
+              onChange={(e)=>setHeight(e.target.value)}
             />
           </div>
           <div>
@@ -29,6 +35,7 @@ const page = () => {
               type="number"
               name="weight"
               className="w-[50px] border rounded mt-2"
+              onChange={(e)=>setWeight(e.target.value)}
             />
           </div>
         </div>
@@ -36,10 +43,11 @@ const page = () => {
           <button
             type="button"
             className="bg-black text-white w-[75px] mb-10 rounded-[5px] p-1 "
+            onClick={handleBMI}
           >
             wasup!?
           </button>
-          <h1>Result: {12}</h1>
+          <h1>Result: {48}</h1>
           <h1>Insights: {"Under-Weight"}</h1>
         </div>
       </div>
