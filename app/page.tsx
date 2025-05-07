@@ -11,14 +11,21 @@ const page = () => {
           </p>
         </div>
         <div className="flex flex-row justify-center gap-30 mt-5">
-          <div >
+          <div>
             <h1 className="font-bold text-[17px]  ">Height</h1>
-            <input type="number" name="height" className="w-[50px] border rounded mt-2" />
+            <input
+              type="number"
+              name="height"
+              className="w-[50px] border rounded mt-2"
+            />
           </div>
           <div>
             <h1 className="font-bold text-[17px] ">Weight</h1>
-            <input type="number" name="weight" className="w-[50px] border rounded mt-2" />
-
+            <input
+              type="number"
+              name="weight"
+              className="w-[50px] border rounded mt-2"
+            />
           </div>
         </div>
       </div>
