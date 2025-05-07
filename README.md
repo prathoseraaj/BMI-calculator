@@ -14,4 +14,4 @@ A simple Body Mass Index (BMI) calculator built using **Next.js** and **TypeScri
 
 - [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS]
+- [Tailwind CSS](https://tailwindui.com/documentation)
