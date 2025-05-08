@@ -66,7 +66,7 @@ const page = () => {
         <div className="flex flex-col items-center mt-10 ">
           <button
             type="button"
-            className="bg-black text-white w-[75px] mb-10 rounded-[5px] p-1 "
+            className="bg-black text-white w-[75px] mb-10 rounded-[5px] p-1 shadow-2xl hover:bg-white hover:text-black border-1"
             onClick={handleBMI}
           >
             wasup!?
