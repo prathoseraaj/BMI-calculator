@@ -5,14 +5,32 @@ const page = () => {
   const [height, setHeight] = useState<number>(0);
   const [weight, setWeight] = useState<number>(0);
   const [result, setResult] = useState<number>(0);
+  const [insights, setInsights] = useState<string>("");
 
   const handleBMI = () => {
     console.log("Height:",height)
     console.log("Weight:",weight)
 
-    const bmiresult: number = weight*10000/(height*height)
+    const bmiresult: number = Math.round(weight*10000/(height*height))
     console.log(bmiresult)
     setResult(bmiresult)
+
+    if(bmiresult < 18.5){
+      setInsights("Under-weight")
+    }
+    else if(18.5 < bmiresult && bmiresult < 24.9){
+      setInsights("Normal-weight")
+    }
+    else if(25.0 < bmiresult && bmiresult < 29.9){
+      setInsights("Over-weight")
+    }
+    else if(30.0 < bmiresult && bmiresult < 34.9){
+      setInsights("Obese")
+    }
+    else if(35 < bmiresult){
+      setInsights("Extremely Obese")
+    }
+    
 
   }
 
@@ -54,7 +72,7 @@ const page = () => {
             wasup!?
           </button>
           <h1>Result: {result}</h1>
-          <h1>Insights: {"Under-Weight"}</h1>
+          <h1>Insights: {insights}</h1>
         </div>
       </div>
     </div>
