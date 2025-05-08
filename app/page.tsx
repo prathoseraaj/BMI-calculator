@@ -30,7 +30,7 @@ const page = () => {
     else if(35 < bmiresult){
       setInsights("Extremely Obese")
     }
-    
+     
 
   }
 
